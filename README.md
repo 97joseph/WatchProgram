@@ -2,7 +2,6 @@
 
  A simple multi-threaded implementation
 
-
 Programming Assignment: watch
 
 # ![](file:///C:/Users/97jos/AppData/Local/Temp/msohtmlclip1/01/clip_image004.gif)Description
@@ -99,31 +98,3 @@ program exits when the person who launched the program is no longer logged
 in.
 
 *(There are several ways of doing this part.) *
-
-# Submission
-
-The submission structure is as follows:
-
-1. Complete
-   your draft of the programming assignment.
-2. Use
-   feedback received from your instructor to improve your code.
-3. Complete
-   your final version of the programming assignment.
-4. Submit
-   your final version.
-
-# Deliverables
-
-Use the following naming convention for your files:
-
-•      **Draft: **LastnameFirstname-Coursenumber-Assignment
-title.txt  (e.g.:
-SmithJane-CS43203-watch-Draft.txt).
-
-•       **Final** :
-LastnameFirstname-Coursenumber-Assignment title.txt  (e.g.:
-SmithJane-CS43203-watch-Final.txt).
-
-o ***Output*** *: Include a screenshot of the sample output
-to show the program running. *
