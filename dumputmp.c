@@ -1,9 +1,20 @@
+/* dumputmp.c 
+ *
+ *	purpose:	display contents of wtmp or utmp in readable form
+ *	args:		none for default (/etc/utmp) or a filename
+ *	action:		open the file and read it struct by struct,
+ *			displaying all members of struct in nice columns
+ *	history:	Feb 15 1996: added buffering using utmplib
+ *	compiling:	to compile this, use
+ *			gcc dumputmp.c utmplib.c -o dumputmp
+ */
+
 #include	<stdio.h>
 #include	<sys/types.h>
 #include	<utmp.h>
+#include	<time.h>
 
-main(ac,av)
-char **av;
+main(int ac,char **av)
 {
 	if ( ac == 1 )
 		dumpfile( UTMP_FILE );
@@ -11,38 +22,42 @@ char **av;
 		dumpfile( av[1] );
 }
 
-dumpfile( fn )
-char *fn;
+dumpfile( char *fn )
 /*
  * open file and dump records
  */
 {
-	struct utmp	utrec;
-	int		fd;
+	struct utmp	*utp,		/* ptr to struct	*/
+			*utmp_next();	/* declare its type	*/
 
-	fd = open( fn, 0 );
-	if ( fd == -1 )
+	if ( utmp_open( fn ) == -1 )	/* open file		*/
 	{
 		perror( fn );
 		return ;
 	}
-	while( read( fd, &utrec, sizeof(utrec) ) == sizeof(utrec) )
-		show_utrec(&utrec);
-	close( fd );
+
+	/* loop, reading records and showing them */
+
+	while( utp = utmp_next() )
+		show_utrec( utp );
+	utmp_close();
 }
 	
-show_utrec( rp )
-struct utmp *rp;
+show_utrec( struct utmp *rp )
 {
 	char	*typename();
+	time_t	when;
 
 	printf("%-8.8s ", rp->ut_user );
-	/* printf("%-14.14s ", rp->ut_id   ); /* used it for hp-ux */
-	printf("%-12.12s ", rp->ut_line );
+	printf("%-4.4s ", rp->ut_id   );
+	printf("%-8.8s ", rp->ut_line );
 	printf("%6d ", rp->ut_pid );
-	printf("%4d %-12.12s ", rp->ut_type , typename(rp->ut_type) );
-	printf("%12d ", rp->ut_time );
-	printf("%s ", rp->ut_host );
+	printf("%4d %-14.14s ", rp->ut_type , typename(rp->ut_type) );
+	when = rp->ut_time;
+	printf("%12ld ", (long) when );
+	printf("[%15.15s]", 4+ctime(&when));
+	// printf("%12.12s", 4+ctime(&rp->ut_time));
+	printf("%s", rp->ut_host );
 	putchar('\n');
 }
 
