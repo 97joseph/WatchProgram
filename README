@@ -1,7 +1,5 @@
 loginhist by 
-	Christopher Fuentes
-	cfuentes@g.harvard.edu
-	HUID 60857326
+	Student Details
 
 Common functions between whodate and lastlogin 
 were abstacted into utils.c and wtmp_utils.c. 

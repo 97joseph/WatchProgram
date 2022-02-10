@@ -1,10 +1,4 @@
 /*
-* 	utils.h
-*	Christopher Fuentes
-*	cfuentes@g.harvard.edu
-*	HUID 60857326
-*/
-
 
 /*
 * 	Arg struct to hold flag->value pairs. 

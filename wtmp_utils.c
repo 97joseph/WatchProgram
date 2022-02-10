@@ -1,9 +1,4 @@
 /*
-* 	wtmp_utils.c
-*	Christopher Fuentes
-*	cfuentes@g.harvard.edu
-*	HUID 60857326
-*
 * 	wtmp_utils.c Is modified from utmplib.c from lecture 2,
 *	Credit for functions:
 		int wtmp_close()

@@ -1,8 +1,4 @@
 /*
-* 	whodate.c
-*	Christopher Fuentes
-*	cfuentes@g.harvard.edu
-*	HUID 60857326
 *
 * 	whodate takes a date and optional filename
 *	and prints all login records for that date. 

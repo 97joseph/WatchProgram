@@ -1,8 +1,5 @@
 /*
-* 	wtmp_utils.h
-*	Christopher Fuentes
-*	cfuentes@g.harvard.edu
-*	HUID 60857326
+Student Details
 */
 #include    <utmp.h>
 

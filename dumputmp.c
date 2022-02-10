@@ -5,7 +5,7 @@
  *	action:		open the file and read it struct by struct,
  *			displaying all members of struct in nice columns
  *	history:	Feb 15 1996: added buffering using utmplib
- *	compiling:	to compile this, use
+ *	compiling:	to compile this, use/
  *			gcc dumputmp.c utmplib.c -o dumputmp
  */
 

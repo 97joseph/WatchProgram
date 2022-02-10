@@ -1,9 +1,4 @@
 /*
-* 	lastlogin.c
-*	Christopher Fuentes
-*	cfuentes@g.harvard.edu
-*	HUID 60857326
-*
 * 	lastlogin takes a username and optional
 *	filename as input and prints the last
 *	login record for that user to stdout. 

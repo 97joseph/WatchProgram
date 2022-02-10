@@ -1,8 +1,4 @@
 /*
-* 	utils.c
-*	Christopher Fuentes
-*	cfuentes@g.harvard.edu
-*	HUID 60857326
 *
 * 	utils contains common utility functions for
 *	parsing flagged arguments from an array of 
