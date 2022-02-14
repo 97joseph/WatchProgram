@@ -1,4 +1,4 @@
-Script started on Sun 15 Feb 2015 03:10:05 AM EST
+Script started on Sun 15 Feb 2022 03:10:05 AM EST
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ make clean
 rm -f *.o core dumputmp whodate lastlogin who2 who3
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ make lastlogin
@@ -8,25 +8,25 @@ cc -Wall lastlogin.c utils.o wtmp_utils.o -o lastlogin
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ ./lastlogin
 Usage: lastlogin [-f filename] username
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ ./lastlogin cfuentes
-cfuentes pts/1        2015-02-15 02:39 (c-24-128-100-220.hsd1.nh.comcast.net)
+cfuentes pts/1        2022-02-15 02:39 (c-24-128-100-220.hsd1.nh.comcast.net)
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ ./lastlogin -f s[Kwtmp.
 wtmp.big     wtmp.sample  
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ ./lastlogin -f wtmp.big ella
-ella     pts/107      2015-02-05 22:45 (10.49.39.103)
+ella     pts/107      2022-02-05 22:45 (10.49.39.103)
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ ./lastlogin ell [Ka -f wtmp.big
-ella     pts/107      2015-02-05 22:45 (10.49.39.103)
+ella     pts/107      2022-02-05 22:45 (10.49.39.103)
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ ##[K[Kwho[K[K[K##ok, now for whodate
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ make whodate
 cc -Wall whodate.c  utils.o  wtmp_utils.o -o whodate
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ ./whodate
 Usage: lastlogin [-f filename] yyyy mm dd
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ ./h[Kwhodate 2015 02 14[K5
-sharonwouda pts/0        2015-02-15 00:34 (1-64-167-220.static.netvigator.com)
-keesan   pts/1        2015-02-15 00:40 (ice4.fas.harvard.edu)
-cfuentes pts/1        2015-02-15 02:39 (c-24-128-100-220.hsd1.nh.comcast.net)
+sharonwouda pts/0        2022-02-15 00:34 (1-64-167-220.static.netvigator.com)
+keesan   pts/1        2022-02-15 00:40 (ice4.fas.harvard.edu)
+cfuentes pts/1        2022-02-15 02:39 (c-24-128-100-220.hsd1.nh.comcast.net)
 cfuentes@ice1:~/CSCI-E28/pset1/loginhist$ ./whodate 2015 02 15 -f[K[K[K[K[K06
-lib215   pts/0        2015-02-06 04:11 (ice2.fas.harvard.edu)
-molay    pts/1        2015-02-06 04:12 (ice2.fas.harvard.edu)
+lib215   pts/0        2022-02-06 04:11 (ice2.fas.harvard.edu)
+molay    pts/1        2022-02-06 04:12 (ice2.fas.harvard.edu)
 schiebel pts/0        2015-02-06 09:30 (ice2.fas.harvard.edu)
 libe295  pts/0        2015-02-06 11:03 (66.92.86.168)
 andrewmayo pts/0        2015-02-06 14:18 (nwl-b127-m07.fas.harvard.edu)
